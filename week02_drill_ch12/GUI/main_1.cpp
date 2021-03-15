@@ -79,7 +79,9 @@ win.attach(m);
 win.attach(c);
 
 
-
+Image i{Point{200,250},"Moon.jpg"};
+i.set_mask(Point{250,200},200,200);
+win.attach(i);
 
 
 
