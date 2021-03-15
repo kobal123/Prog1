@@ -19,17 +19,23 @@ Point tl{0,0};
 Simple_window win{tl,800,1000,"Canvas"};
 
 
+Vector_ref<Rectangle> v;
+
 for(int i=0;i<rect_num;i++){
 	for(int k=0;k<rect_num;k++){
-
+/*
 		Point *p=new Point(i*size,k*size);
 
 		Rectangle *r = new Rectangle(*p,size,size);
 
 		//ha az átlóhoz érünk legyen piros a négyzet
 		if(i==k)r->set_fill_color(Color::red);
+*/
 
-		win.attach(*r);
+
+		v.push_back(new Rectangle(Point{i*size,k*size},size,size));
+		if(i==k)v[i*rect_num+k].set_fill_color(Color::red);
+		win.attach(v[i*rect_num+k]);
 	}
 
 }
