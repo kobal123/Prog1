@@ -47,12 +47,9 @@ f5.set_color(Color::blue);
 
 
 
-//bal alsó végpont a Function definíciójával.
-int e1= (size/2)+int(20*-10);
-int e2= (size/2 )-int(slope(20*-10.0))-20;
 
 
-Text t{Point{e1,e2},"x/2"};
+Text t{Point{f2.point(0).x,f2.point(0).y -5},"x/2"};
 
 win.attach(t);
 
